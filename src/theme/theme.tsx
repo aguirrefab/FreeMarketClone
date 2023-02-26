@@ -1,6 +1,6 @@
-import { extendTheme, theme } from "@chakra-ui/react";
+import { extendTheme, theme as baseTheme } from "@chakra-ui/react";
 
-export default extendTheme({
+const theme = extendTheme({
     styles: {
         global: {
           body: {
@@ -22,13 +22,13 @@ export default extendTheme({
           900: "#BFB543",
         },
         secondary: {
-          ...theme.colors.messenger,
-          100: theme.colors.messenger[50],
-          50: `rgba(65,137,230,.15)`,
-        },
-        success: theme.colors.whatsapp,
-        error: theme.colors.red,
-        warning: theme.colors.orange,
+           ...baseTheme.colors.messenger,
+           100: baseTheme.colors.messenger[50],
+           50: `rgba(65,137,230,.15)`,
+         },
+         success: baseTheme.colors.whatsapp,
+         error: baseTheme.colors.red,
+         warning: baseTheme.colors.orange,
       },
       sizes: {
         container: {
@@ -36,8 +36,8 @@ export default extendTheme({
         },
       },
       fonts: {
-        body: "Proxima Nova",
-        heading: "Proxima Nova",
+        body: `'Proxima Nova', sans-serif`,
+        heading: `'Proxima Nova', sans-serif`,
       },
       components: {
         Link: {
@@ -101,3 +101,5 @@ export default extendTheme({
         },
       },
 })
+
+export default theme;
