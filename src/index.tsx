@@ -5,6 +5,7 @@ import { App } from "./App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 import theme from "../src/theme/theme"
+import Fonts from "./fonts/fonts"
 
 
 const container = document.getElementById("root")
@@ -15,6 +16,7 @@ root.render(
   <React.StrictMode>
     <ColorModeScript />
     <ChakraProvider theme={theme}>
+      <Fonts />
       <App />
     </ChakraProvider>
   </React.StrictMode>,
